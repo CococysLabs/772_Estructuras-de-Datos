@@ -1,0 +1,7 @@
+digraph ListaEnlazada {
+    rankdir=LR;
+    node [shape=record, style=filled, fillcolor="#eaff06"];
+    nodo0 [label="{20210271 | jens | sistemas}"];
+    nodo1 [label="{202102771 | jeremy | sistemas}"];
+    nodo0 -> nodo1;
+}

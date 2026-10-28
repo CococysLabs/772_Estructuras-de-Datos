@@ -1,0 +1,29 @@
+digraph HeapMaxPilotos {
+rankdir=TB;
+bgcolor="#f7f9fc";
+node [shape=box, style=filled, fillcolor="#16a085", fontcolor=white, fontname="Arial", fontsize=12, color="#117a65", penwidth=1.5];
+edge [color="#5d6d7e", arrowsize=0.8, penwidth=1.4];
+label="Max Heap de Pilotos (por horas de vuelo)";
+labelloc=t;
+N0 [label="Pedro Morales\n850 horas"];
+N0 -> N1;
+N0 -> N2;
+N1 [label="Camila Ortiz\n620 horas"];
+N1 -> N3;
+N1 -> N4;
+N2 [label="Carlos Gomez\n700 horas"];
+N2 -> N5;
+N2 -> N6;
+N3 [label="Ana Martinez\n400 horas"];
+N3 -> N7;
+N3 -> N8;
+N4 [label="Luis Fernandez\n600 horas"];
+N4 -> N9;
+N4 -> N10;
+N5 [label="Sofia Rodriguez\n250 horas"];
+N6 [label="Juan Perez\n500 horas"];
+N7 [label="Elena Diaz\n100 horas"];
+N8 [label="Maria Lopez\n300 horas"];
+N9 [label="Andres Pena\n550 horas"];
+N10 [label="Valeria Nunez\n200 horas"];
+}

@@ -1,0 +1,14 @@
+digraph ArbolBinarioDeBusquedaPilotos {
+bgcolor=lightblue;
+Node [shape=square, style=filled, fillcolor=beige, color=black, penwidth=2];
+edge [splines=polyline, arrowhead=curve];
+"laura\n96 horas" -> "carla\n32 horas";
+"laura\n96 horas" -> "alex\n300 horas";
+"carla\n32 horas" -> "jens\n15 horas";
+"carla\n32 horas" -> "daniela\n47 horas";
+"jens\n15 horas" -> "josue\n17 horas";
+"alex\n300 horas" -> "luisa\n170 horas";
+"alex\n300 horas" -> "maria\n500 horas";
+"luisa\n170 horas" -> "mynor\n157 horas";
+"maria\n500 horas" -> "daniel\n301 horas";
+}
