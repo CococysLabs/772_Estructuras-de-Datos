@@ -1,0 +1,26 @@
+digraph ArbolBCanciones {
+bgcolor=lightblue;
+node [shape=box, style=filled, fillcolor=beige, color=black, penwidth=2];
+edge [splines=polyline, arrowhead=curve];
+NodoNodo000001f920558610 [shape=record, label="<f0> C04 - Wake Me Up | <f1> C08 - Scary Monsters and Nice Sprites"];
+NodoNodo000001f920558610 -> NodoNodo000001f920558110;
+NodoNodo000001f920558110 [shape=record, label="<f0> C02 - Titanium"];
+NodoNodo000001f920558110 -> NodoNodo000001f9205582d0;
+NodoNodo000001f9205582d0 [shape=record, label="<f0> C01 - Animals"];
+NodoNodo000001f920558110 -> NodoNodo000001f9205581d0;
+NodoNodo000001f9205581d0 [shape=record, label="<f0> C03 - Faded"];
+NodoNodo000001f920558610 -> NodoNodo000001f920558650;
+NodoNodo000001f920558650 [shape=record, label="<f0> C06 - Clarity"];
+NodoNodo000001f920558650 -> NodoNodo000001f9205585d0;
+NodoNodo000001f9205585d0 [shape=record, label="<f0> C05 - Levels"];
+NodoNodo000001f920558650 -> NodoNodo000001f920558c50;
+NodoNodo000001f920558c50 [shape=record, label="<f0> C07 - Strobe"];
+NodoNodo000001f920558610 -> NodoNodo000001f9205588d0;
+NodoNodo000001f9205588d0 [shape=record, label="<f0> C10 - Alone | <f1> C12 - Lean On"];
+NodoNodo000001f9205588d0 -> NodoNodo000001f920558710;
+NodoNodo000001f920558710 [shape=record, label="<f0> C09 - Adagio for Strings"];
+NodoNodo000001f9205588d0 -> NodoNodo000001f920558750;
+NodoNodo000001f920558750 [shape=record, label="<f0> C11 - Silence"];
+NodoNodo000001f9205588d0 -> NodoNodo000001f920558850;
+NodoNodo000001f920558850 [shape=record, label="<f0> C13 - Don't You Worry Child | <f1> C14 - Opus | <f2> C15 - Language"];
+}

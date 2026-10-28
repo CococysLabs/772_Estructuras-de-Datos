@@ -1,0 +1,58 @@
+digraph SistemaMusica {
+    rankdir=TB;
+    node [fontname="Helvetica", fontsize=12];
+    edge [fontname="Helvetica", fontsize=10];
+    compound=true;
+    bgcolor="white";
+    ranksep=0.5;
+    nodesep=0.4;
+
+    graph [splines=ortho];
+    edge [arrowsize=0.8, color=black, fontcolor=black];
+
+    {
+        rank=same;
+        artista0 [label="Shakira", shape=box, style="filled,rounded", fillcolor="black", color="black", penwidth=2, width=1.8, height=0.8, fontname="Helvetica-Bold", fontcolor="white"];
+        artista1 [label="Nirvana", shape=box, style="filled,rounded", fillcolor="black", color="black", penwidth=2, width=1.8, height=0.8, fontname="Helvetica-Bold", fontcolor="white"];
+        artista2 [label="Coldplay", shape=box, style="filled,rounded", fillcolor="black", color="black", penwidth=2, width=1.8, height=0.8, fontname="Helvetica-Bold", fontcolor="white"];
+        artista3 [label="Daft Punk", shape=box, style="filled,rounded", fillcolor="black", color="black", penwidth=2, width=1.8, height=0.8, fontname="Helvetica-Bold", fontcolor="white"];
+    }
+
+    // CONEXIONES ENTRE ARTISTAS
+    artista0 -> artista1 [color=black, label="siguiente", dir=forward, penwidth=1.5, arrowhead=vee];
+    artista1 -> artista0 [color=black, label="anterior", constraint=false, penwidth=1.5, arrowhead=vee];
+    artista1 -> artista2 [color=black, label="siguiente", dir=forward, penwidth=1.5, arrowhead=vee];
+    artista2 -> artista1 [color=black, label="anterior", constraint=false, penwidth=1.5, arrowhead=vee];
+    artista2 -> artista3 [color=black, label="siguiente", dir=forward, penwidth=1.5, arrowhead=vee];
+    artista3 -> artista2 [color=black, label="anterior", constraint=false, penwidth=1.5, arrowhead=vee];
+
+    // CANCIONES DE: Shakira
+    cancion0_0 [label="Waka Waka\n(2010)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+    cancion0_1 [label="Monotonia\n(2022)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+
+    // CANCIONES DE: Nirvana
+    cancion1_0 [label="Smells Like Teen Spirit\n(1991)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+
+    // CANCIONES DE: Coldplay
+    cancion2_0 [label="Viva La Vida\n(2008)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+    cancion2_1 [label="Clocks\n(2002)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+
+    // CANCIONES DE: Daft Punk
+    cancion3_0 [label="Get Lucky\n(2013)", shape=box, style="filled", fillcolor="#1e3ca0", color="black", penwidth=1.5, width=1.4, height=0.9, fontcolor="white", fontname="Helvetica"];
+
+    // CONEXION ARTISTA -> PRIMERA CANCION
+    artista0 -> cancion0_0 [color=black, dir=forward, penwidth=2, arrowhead=vee];
+    artista1 -> cancion1_0 [color=black, dir=forward, penwidth=2, arrowhead=vee];
+    artista2 -> cancion2_0 [color=black, dir=forward, penwidth=2, arrowhead=vee];
+    artista3 -> cancion3_0 [color=black, dir=forward, penwidth=2, arrowhead=vee];
+
+    // CADENA DE CANCIONES DE CADA ARTISTA
+    cancion0_0 -> cancion0_1 [color=black, dir=forward, penwidth=1.5, arrowhead=vee, weight=10];
+    cancion2_0 -> cancion2_1 [color=black, dir=forward, penwidth=1.5, arrowhead=vee, weight=10];
+
+    // FILAS DE CANCIONES (alineacion vertical)
+    { rank=same; cancion0_0 cancion1_0 cancion2_0 cancion3_0 }
+    { rank=same; cancion0_1 cancion2_1 }
+
+    titulo_invisible [label="", shape=plaintext, width=0, height=0];
+}

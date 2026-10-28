@@ -1,0 +1,82 @@
+digraph Sparce_Matrix {
+rankdir=TB;
+splines=ortho;
+bgcolor="#f7f9fc";
+pad=0.6;
+nodesep=0.6;
+ranksep=0.9;
+label="Matriz Dispersa Tipo ** Director";
+labelloc=t;
+fontname="Arial";
+node [shape=box, style="rounded,filled", fontname="Arial", fontsize=11, color="#2c3e50"];
+edge [color="#b0bec5", arrowsize=0.8, penwidth=1.2];
+Mt [label="TIPO ** DIRECTOR", width=1.5, height=0.6, style="rounded,filled", fillcolor="#34495e", fontcolor=white, fontsize=13, group=0, color="#1b2631", penwidth=2];
+{ rank=same; Mt; NodeBird; NodeInarritu; NodeNolan; NodeVilleneuve; }
+NodeBird [label="Bird", style="rounded,filled", fillcolor="#e67e22", fontcolor=white, fontsize=12, group=1, color="#d35400", penwidth=1.5];
+NodeInarritu [label="Inarritu", style="rounded,filled", fillcolor="#e67e22", fontcolor=white, fontsize=12, group=2, color="#d35400", penwidth=1.5];
+NodeNolan [label="Nolan", style="rounded,filled", fillcolor="#e67e22", fontcolor=white, fontsize=12, group=3, color="#d35400", penwidth=1.5];
+NodeVilleneuve [label="Villeneuve", style="rounded,filled", fillcolor="#e67e22", fontcolor=white, fontsize=12, group=4, color="#d35400", penwidth=1.5];
+NodeAccion [label="Accion", style="rounded,filled", fillcolor="#16a085", fontcolor=white, fontsize=12, group=0, color="#117a65", penwidth=1.5];
+NodeAnimacion [label="Animacion", style="rounded,filled", fillcolor="#16a085", fontcolor=white, fontsize=12, group=0, color="#117a65", penwidth=1.5];
+NodeCiencia_Ficcion [label="Ciencia_Ficcion", style="rounded,filled", fillcolor="#16a085", fontcolor=white, fontsize=12, group=0, color="#117a65", penwidth=1.5];
+NodeDrama [label="Drama", style="rounded,filled", fillcolor="#16a085", fontcolor=white, fontsize=12, group=0, color="#117a65", penwidth=1.5];
+NodeAccionNolan [label="Batman", style="rounded,filled", fillcolor="#f9e79f", fontcolor="#1b2631", group=3, color="#5d6d7e"];
+NodeAccionVilleneuve [label="Dune", style="rounded,filled", fillcolor="#f5b7b1", fontcolor="#1b2631", group=4, color="#5d6d7e"];
+NodeAnimacionBird [label="Pixar", style="rounded,filled", fillcolor="#aed6f1", fontcolor="#1b2631", group=1, color="#5d6d7e"];
+NodeCiencia_FiccionNolan [label="Interstellar", style="rounded,filled", fillcolor="#f9e79f", fontcolor="#1b2631", group=3, color="#5d6d7e"];
+NodeCiencia_FiccionVilleneuve [label="Blade_Runner_2049", style="rounded,filled", fillcolor="#f5b7b1", fontcolor="#1b2631", group=4, color="#5d6d7e"];
+NodeDramaInarritu [label="The_Revenant", style="rounded,filled", fillcolor="#a9dfbf", fontcolor="#1b2631", group=2, color="#5d6d7e"];
+{ rank=same; NodeAccion; NodeAccionNolan; NodeAccionVilleneuve; }
+{ rank=same; NodeAnimacion; NodeAnimacionBird; }
+{ rank=same; NodeCiencia_Ficcion; NodeCiencia_FiccionNolan; NodeCiencia_FiccionVilleneuve; }
+{ rank=same; NodeDrama; NodeDramaInarritu; }
+stats [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="5" COLOR="#5d6d7e" BGCOLOR="#eaf2f8">
+<TR><TD COLSPAN="2" BGCOLOR="#34495e" ALIGN="CENTER"><FONT COLOR="white" FACE="Arial"><B>ESTADISTICAS</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT FACE="Arial">Total peliculas</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Arial"><B>6</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT FACE="Arial">Total directores</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Arial"><B>4</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT"><FONT FACE="Arial">Total tipos</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Arial"><B>4</B></FONT></TD></TR>
+<TR><TD COLSPAN="2" BGCOLOR="#d4e6f1" ALIGN="CENTER"><FONT FACE="Arial"><B>Peliculas por tipo</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Accion: <B>2</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Animacion: <B>1</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Ciencia_Ficcion: <B>2</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Drama: <B>1</B></FONT></TD></TR>
+<TR><TD COLSPAN="2" BGCOLOR="#fdebd0" ALIGN="CENTER"><FONT FACE="Arial"><B>Peliculas por director</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Bird: <B>1</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Inarritu: <B>1</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Nolan: <B>2</B></FONT></TD></TR>
+<TR><TD ALIGN="LEFT" COLSPAN="2"><FONT FACE="Arial">Villeneuve: <B>2</B></FONT></TD></TR>
+</TABLE>>, shape=plain];
+{ rank=same; NodeAnimacion; stats; }
+Mt -> NodeAccion [color="#34495e", penwidth=2, arrowhead=normal];
+Mt -> NodeBird [color="#34495e", penwidth=2, arrowhead=normal];
+NodeAccion -> NodeAnimacion [color="#16a085", penwidth=2, arrowhead=normal];
+NodeAnimacion -> NodeCiencia_Ficcion [color="#16a085", penwidth=2, arrowhead=normal];
+NodeCiencia_Ficcion -> NodeDrama [color="#16a085", penwidth=2, arrowhead=normal];
+NodeBird -> NodeInarritu [color="#e67e22", penwidth=2, arrowhead=normal];
+NodeInarritu -> NodeNolan [color="#e67e22", penwidth=2, arrowhead=normal];
+NodeNolan -> NodeVilleneuve [color="#e67e22", penwidth=2, arrowhead=normal];
+NodeAccion -> NodeAccionNolan [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeAccionNolan -> NodeAccion [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeAccionNolan -> NodeAccionVilleneuve [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeAccionVilleneuve -> NodeAccionNolan [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeAnimacion -> NodeAnimacionBird [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeAnimacionBird -> NodeAnimacion [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeCiencia_Ficcion -> NodeCiencia_FiccionNolan [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeCiencia_FiccionNolan -> NodeCiencia_Ficcion [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeCiencia_FiccionNolan -> NodeCiencia_FiccionVilleneuve [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeCiencia_FiccionVilleneuve -> NodeCiencia_FiccionNolan [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeDrama -> NodeDramaInarritu [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeDramaInarritu -> NodeDrama [color="#5dade2", penwidth=1.5, arrowhead=normal];
+NodeBird -> NodeAnimacionBird [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeAnimacionBird -> NodeBird [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeInarritu -> NodeDramaInarritu [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeDramaInarritu -> NodeInarritu [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeNolan -> NodeAccionNolan [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeAccionNolan -> NodeNolan [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeAccionNolan -> NodeCiencia_FiccionNolan [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeCiencia_FiccionNolan -> NodeAccionNolan [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeVilleneuve -> NodeAccionVilleneuve [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeAccionVilleneuve -> NodeVilleneuve [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeAccionVilleneuve -> NodeCiencia_FiccionVilleneuve [color="#eb984e", penwidth=1.5, arrowhead=normal];
+NodeCiencia_FiccionVilleneuve -> NodeAccionVilleneuve [color="#eb984e", penwidth=1.5, arrowhead=normal];
+}

@@ -1,0 +1,20 @@
+digraph ArbolBCanciones {
+bgcolor=lightblue;
+node [shape=box, style=filled, fillcolor=beige, color=black, penwidth=2];
+edge [splines=polyline, arrowhead=curve];
+Nodo0xacff980 [shape=record, label="<f0> C04 - Scared to Be Lonely"];
+Nodo0xacff980 -> Nodo0xad002a0;
+Nodo0xad002a0 [shape=record, label="<f0> C02 - Wizard"];
+Nodo0xad002a0 -> Nodo0xacfb2b0;
+Nodo0xacfb2b0 [shape=record, label="<f0> C01 - Animals"];
+Nodo0xad002a0 -> Nodo0xacfff90;
+Nodo0xacfff90 [shape=record, label="<f0> C03 - In the Name of Love"];
+Nodo0xacff980 -> Nodo0xad00100;
+Nodo0xad00100 [shape=record, label="<f0> C06 - Don't Look Down | <f1> C08 - High on Life"];
+Nodo0xad00100 -> Nodo0xad00870;
+Nodo0xad00870 [shape=record, label="<f0> C05 - There for You"];
+Nodo0xad00100 -> Nodo0xad00610;
+Nodo0xad00610 [shape=record, label="<f0> C07 - Ocean"];
+Nodo0xad00100 -> Nodo0xacff8e0;
+Nodo0xacff8e0 [shape=record, label="<f0> C09 - Summer Days | <f1> C10 - Tremor"];
+}

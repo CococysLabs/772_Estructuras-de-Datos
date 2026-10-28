@@ -1,0 +1,10 @@
+digraph ArbolBinarioDeBusquedaPeliculas {
+bgcolor=lightblue;
+Node [shape=square, style=filled, fillcolor=beige, color=black, penwidth=2];
+edge [splines=polyline, arrowhead=curve];
+"ejemplo 1\n(P040)" -> "ejemplo2\n(P030)";
+"ejemplo 1\n(P040)" -> "Ejemplo 3\n(P041)";
+"ejemplo2\n(P030)" -> "ejemplo 4\n(P015)";
+"ejemplo 4\n(P015)" -> "ejemplo 5\n(P006)";
+"Ejemplo 3\n(P041)" -> "ejemplo 6\n(P080)";
+}
