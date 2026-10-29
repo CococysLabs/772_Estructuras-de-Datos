@@ -100,5 +100,5 @@ Donde:
 
 ## 📧 Contacto
 
-- Email: computacion.cococys@gmail.com
+- Email: software.cococys@gmail.com
 - Organización: [CococysLabs](https://github.com/CococysLabs)
